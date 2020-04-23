@@ -2,8 +2,8 @@
   "name": "phasetwo-connect",
   "version": "0.0.1",
   "description": "An augmented version of keycloak-connect",
-  "main": "dist/phasetwo-connect.cjs.js",
-  "module": "dist/phasetwo-connect.es.js",
+  "main": "dist/phasetwo-connect.cjs",
+  "module": "dist/phasetwo-connect.mjs",
   "browser": "dist/phasetwo-connect.browser.js",
   "files": [
     "dist"
