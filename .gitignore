@@ -12,3 +12,4 @@ pid.txt
 .idea/
 tmp/
 .vscode/
+dist/
