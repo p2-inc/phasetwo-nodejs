@@ -4,7 +4,7 @@
   "description": "An augmented version of keycloak-connect",
   "repository": "https://github.com/somaholiday/phasetwo-nodejs",
   "private": true,
-  "main": "dist/phasetwo-nodejs.umd.js",
+  "main": "dist/phasetwo-nodejs.cjs.js",
   "module": "dist/phasetwo-nodejs.es.js",
   "files": [
     "dist"
@@ -23,9 +23,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "jest": "^26.0.0",
     "np": "^6.2.3",
-    "rollup": "^2.7.2"
+    "rollup": "^2.7.2",
+    "rollup-plugin-node-polyfills": "^0.2.1"
   }
 }

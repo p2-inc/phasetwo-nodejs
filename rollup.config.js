@@ -1,3 +1,7 @@
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 import pkg from './package.json';
 
 export default {
@@ -11,10 +15,6 @@ export default {
       file: pkg.module,
       format: 'es', // ES6 import/export
     },
-    {
-      file: pkg.browser,
-      format: 'iife', // immediately invoked function expression (browser style)
-      name: 'PhaseTwo_Connect', // the global which can be used in a browser
-    },
   ],
+  plugins: [resolve({ preferBuiltins: true }), commonjs(), json(), nodePolyfills()],
 };
