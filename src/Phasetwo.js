@@ -1,5 +1,7 @@
 import Keycloak from 'keycloak-connect';
 
+import Account from './api/Account';
+
 class Phasetwo extends Keycloak {
   constructor(config) {
     super(config);
@@ -21,6 +23,7 @@ class Phasetwo extends Keycloak {
   }
 
   // Demonstrate getting a field set in superclass
+  // NOTE: this is not the same object that was passed in to the constructor
   getConfig() {
     return this.config;
   }
@@ -35,6 +38,15 @@ class Phasetwo extends Keycloak {
   protect(...args) {
     console.log('🔐 Phase Two protect(), called with', JSON.stringify(args));
     return super.protect(...args);
+  }
+
+  /**
+   * Create an Account object used to interact with the Keycloak Account API.
+   *
+   * @return {Account} An object used to call methods on the Keyclock Account REST API
+   */
+  accountApi() {
+    return new Account(this.config.realmUrl);
   }
 }
 

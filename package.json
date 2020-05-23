@@ -19,7 +19,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "keycloak-connect": "^10.0.1"
+    "keycloak-connect": "^10.0.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
