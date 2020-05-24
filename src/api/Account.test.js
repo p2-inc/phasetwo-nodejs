@@ -50,4 +50,15 @@ describe('Account', () => {
 
     expect(ret).toEqual(mockResponse);
   });
+
+  it('get() catches server errors', async () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation();
+    expect.assertions(2);
+    const account = new Account('https://wrong.url');
+
+    const ret = await account.get(token);
+    expect(errorSpy).toHaveBeenCalled();
+    expect(ret).toEqual('Error!');
+    errorSpy.mockRestore();
+  });
 });
