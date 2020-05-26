@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
  * A modified version of fetch() which throws an error on non-200 status codes.
  *
  * The default implementation of fetch() only throws when a network error is encountered,
- * leading to the developmen of shims like this one to allow API consumers to handle
+ * leading to the development of shims like this one to allow API consumers to handle
  * API errors via .catch()
  *
  * @return {Promise} A promise resolving to:
