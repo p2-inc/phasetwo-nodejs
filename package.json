@@ -2,7 +2,7 @@
   "name": "phasetwo-nodejs",
   "version": "0.1.0",
   "description": "An augmented version of keycloak-connect",
-  "repository": "https://github.com/somaholiday/phasetwo-nodejs",
+  "repository": "https://github.com/p2-inc/phasetwo-nodejs",
   "private": true,
   "main": "dist/phasetwo-nodejs.cjs.js",
   "module": "dist/phasetwo-nodejs.es.js",

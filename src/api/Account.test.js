@@ -35,7 +35,7 @@ jest.mock('./request', () => ({
 
 describe('Account', () => {
   const token = 'VERY_SECRET_TOKEN';
-  const headers = {
+  const expectedHeaders = {
     'Content-Type': 'application/json',
     Accept: 'application/json, text/plain, */*',
     Authorization: `Bearer ${token}`,
@@ -46,12 +46,13 @@ describe('Account', () => {
     const account = new Account(mockRealmUrl);
 
     const ret = await account.get(token);
-    expect(request).toHaveBeenCalledWith(mockAccountUrl, { headers });
+    expect(request).toHaveBeenCalledWith(mockAccountUrl, { headers: expectedHeaders });
 
     expect(ret).toEqual(mockResponse);
   });
 
   it('get() catches server errors', async () => {
+    // mockImplementation() prevents logging to the console during the test
     const errorSpy = jest.spyOn(console, 'error').mockImplementation();
     expect.assertions(2);
     const account = new Account('https://wrong.url');
