@@ -1,6 +1,6 @@
 import Keycloak from 'keycloak-connect';
 
-import Account from './api/Account';
+import { Account } from 'phasetwo-api-client';
 
 class Phasetwo extends Keycloak {
   constructor(config) {
