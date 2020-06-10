@@ -21,9 +21,7 @@
     "test-watch": "npm test -- --watchAll"
   },
   "dependencies": {
-    "encoding": "^0.1.12",
     "keycloak-connect": "^10.0.1",
-    "node-fetch": "^2.6.0",
     "phasetwo-api-client": "git://github.com/p2-inc/phasetwo-api-client.git"
   },
   "devDependencies": {
