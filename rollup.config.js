@@ -20,6 +20,18 @@ export default {
       format: 'es', // ES6 import/export
     },
   ],
-  plugins: [resolve(), commonjs(), json(), filesize()],
+  plugins: [
+    // locates modules using the Node resolution algorithm, for using third party modules in node_modules
+    resolve(),
+
+    // converts CommonJS modules to ES6, so they can be included in a Rollup bundle
+    commonjs(),
+
+    // converts .json files to ES6 modules
+    json(),
+
+    // shows filesize in console after building Rollup bundle
+    filesize(),
+  ],
   external: externals,
 };
