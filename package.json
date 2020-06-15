@@ -33,6 +33,7 @@
     "babel-jest": "^26.0.1",
     "jest": "^26.0.1",
     "np": "^6.2.3",
-    "rollup": "^2.7.2"
+    "rollup": "^2.7.2",
+    "rollup-plugin-filesize": "^9.0.1"
   }
 }
